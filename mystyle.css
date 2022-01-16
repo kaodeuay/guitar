@@ -2,7 +2,82 @@
     background-color: #fff;
     
 } */
+
 body {
     position: relative;
-  }
-  
+}
+
+.bg-img {
+    /* The image used */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Picture/flower1.jpg"); */
+    height: 130px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Needed to position the navbar */
+    position: relative;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #f2c102;
+    height: 80%;
+}
+
+.nav-pills .nav-link {
+    color: white;
+}
+
+footer.footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.features-icons {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.text-uppercase {
+    color: white;
+}
+
+.list-unstyled {
+    color: white;
+}
+
+.features-icons .features-icons-item {
+    max-width: 20rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+    height: 7rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+    font-size: 4.5rem;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 10;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.containerunderline {
+    width: 1110px;
+    height: 10px;
+    background-color: #f2c102;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 10;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}

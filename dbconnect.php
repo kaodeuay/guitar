@@ -2,8 +2,8 @@
 //Database Information
 $servername = "localhost";
 $username = "root";
-$password = "12345";
-$dbname = "kk";
+$password = "";
+$dbname = "dbstudent";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
