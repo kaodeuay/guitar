@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div class="container bg-light mb-4 mt-4">
+    <div class="container mb-4 mt-4">
         <div class="content">
             <h1>แก้ไขข้อมูลศิษย์เก่า</h1>
             <div class="containerunderline">
