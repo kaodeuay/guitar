@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="mystyle.css">
-    <title>Request Form For Being Reinstated to Student Status</title>
+    <title>หน้าแรก | สมาคมศิษย์เก่าวิทยาลัยเทคโนโลยีทางการแพทย์และสาธารณสุขกาญจนาภิเษก</title>
 </head>
 
 <body>
@@ -21,10 +21,10 @@
     <div class="card" style="background-color: #2F89FC;">
         <div class="card-body">
             <nav class="nav nav-pills nav-justified">
-                <a class="nav-item nav-link active" href="#">หน้าแรก</a>
-                <a class="nav-item nav-link" href="#">ลงทะเบียนศิษย์เก่า</a>
-                <a class="nav-item nav-link" href="#">รายงานข้อมูลศิษย์เก่า</a>
-                <a class="nav-item nav-link" href="#">ตรวจสอบประวัติศิษย์เก่า</a>
+                <a class="nav-item nav-link active" href="/guitar/index1.php">หน้าแรก</a>
+                <a class="nav-item nav-link" href="/guitar/register.php">ลงทะเบียนศิษย์เก่า</a>
+                <a class="nav-item nav-link" href="/guitar/reportalumni.php">รายงานข้อมูลศิษย์เก่า</a>
+                <a class="nav-item nav-link" href="/guitar/checkalumni.php">แก้ไขข้อมูล</a>
             </nav>
         </div>
     </div>
