@@ -36,77 +36,98 @@
             </div>
             <div class="row">
                 <div class="col-sm-4 mt-4">
+                    <h3>สมัครสมาชิก</h3>
+                </div>
+                <div class="col-sm-8">
+                    <form class="row g-3 mt-4" action="process.php" method="POST">
+                        <div class="col-md-12 position-relative">
+                            <label for="validationTooltip04" class="form-label">รหัสนักศึกษา/บัญชีผู้ใช้</label>
+                            <input type="text" class="form-control" name="userid" value="">
+                            <!--//required -->
+                        </div>
+                        <div class="col-md-12 position-relative">
+                            <label for="validationTooltip04" class="form-label">รหัสผ่าน</label>
+                            <input type="password" class="form-control" name="pass" value="">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="validationDefault02" class="form-label">ยืนยันรหัสผ่าน</label>
+                            <input type="password" class="form-control" name="pass" value="">
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 mt-4">
                     <h3>ประวัติส่วนตัว</h3>
                 </div>
                 <div class="col-sm-8">
-                    <form class="row g-3 mt-4">
+                    <div class="row g-3 mt-4">
                         <div class="col-md-4">
                             <label for="validationDefault01" class="form-label">คำนำหน้าชื่อ</label>
-                            <input type="text" class="form-control" id="validationDefault01" value="" required>
+                            <input type="text" class="form-control" name="nname" value="">
                         </div>
                         <div class="col-md-8">
                             <label for="validationDefault02" class="form-label">ชื่อ</label>
-                            <input type="text" class="form-control" id="validationDefault02" value="" required>
+                            <input type="text" class="form-control" name="name" value="">
                         </div>
                         <div class="col-md-6">
                             <label for="validationDefault02" class="form-label">เพศ</label>
-                            <input type="text" class="form-control" id="validationDefault02" value="" required>
+                            <input type="text" class="form-control" name="sex" value="">
                         </div>
                         <div class="col-md-6">
                             <label for="validationDefaultUsername" class="form-label">วันเดือนปีเกิด</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required>
+                                <input type="date" class="form-control" name="brithdate" aria-describedby="inputGroupPrepend2">
                             </div>
                         </div>
                         <div class="col-md-3">
                             <label for="validationDefault03" class="form-label">บ้านเลขที่</label>
-                            <input type="text" class="form-control" id="validationDefault03" required>
+                            <input type="text" class="form-control" name="numhome">
                         </div>
                         <div class="col-md-3">
                             <label for="validationDefault03" class="form-label">หมู่</label>
-                            <input type="text" class="form-control" id="validationDefault03" required>
+                            <input type="text" class="form-control" name="moo">
                         </div>
                         <div class="col-6">
                             <label for="validationDefault03" class="form-label">ตำบล</label>
-                            <input type="text" class="form-control" id="validationDefault03" required>
+                            <input type="text" class="form-control" name="subdistrict">
                         </div>
                         <div class="col-md-4">
                             <label for="validationDefault03" class="form-label">อำเภอ</label>
-                            <input type="text" class="form-control" id="validationDefault03" required>
+                            <input type="text" class="form-control" name="district">
                         </div>
                         <div class="col-md-4">
                             <label for="validationDefault03" class="form-label">จังหวัด</label>
-                            <input type="text" class="form-control" id="validationDefault03" required>
+                            <input type="text" class="form-control" name="province">
                         </div>
                         <div class="col-4">
                             <label for="validationDefault03" class="form-label">รหัสไปรณีย์</label>
-                            <input type="text" class="form-control" id="validationDefault03" required>
+                            <input type="text" class="form-control" name="postage">
                         </div>
                         <div class="col-md-6">
                             <label for="validationDefault02" class="form-label">เบอร์โทร</label>
-                            <input type="text" class="form-control" id="validationDefault02" value="" required>
+                            <input type="text" class="form-control" name="phone" value="">
                         </div>
                         <div class="col-md-6">
                             <label for="validationDefault02" class="form-label">อีเมล</label>
-                            <input type="text" class="form-control" id="validationDefault02" value="" required>
+                            <input type="text" class="form-control" name="mail" value="">
                         </div>
                         <div class="col-md-3">
                             <label for="validationDefault03" class="form-label">รุ่น</label>
-                            <input type="text" class="form-control" id="validationDefault03" required>
+                            <input type="text" class="form-control" name="gen">
                         </div>
                         <div class="col-md-3">
                             <div class="col-md-12 position-relative">
                                 <label for="validationTooltip04" class="form-label">หลักสูตร</label>
-                                <input type="text" class="form-control" id="validationDefault02" value="" required>
+                                <input type="text" class="form-control" name="course" value="">
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="col-md-12 position-relative">
                                 <label for="validationTooltip04" class="form-label">สาขา</label>
-                                <input type="text" class="form-control" id="validationDefault02" value="" required>
+                                <input type="text" class="form-control" name="major" value="">
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -114,21 +135,23 @@
                     <h3>การทำงาน</h3>
                 </div>
                 <div class="col-sm-8">
-                    <form class="row g-3 mt-4">
+                    <div class="row g-3 mt-4">
                         <div class="col-md-12 position-relative">
                             <label for="validationTooltip04" class="form-label">โรงพยาบาล</label>
-                            <input type="text" class="form-control" id="validationDefault02" value="" required>
+                            <input type="text" class="form-control" name="work" value="">
                         </div>
                         <div class="col-md-12 position-relative">
                             <label for="validationTooltip04" class="form-label">ตำแหน่ง</label>
-                            <input type="text" class="form-control" id="validationDefault02" value="" required>
+                            <input type="text" class="form-control" name="position" value="">
                         </div>
                         <div class="col-md-12">
                             <label for="validationDefault02" class="form-label">วันเข้าทำงาน</label>
-                            <input type="text" class="form-control" id="validationDefault02" value="" required>
+                            <input type="date" class="form-control" name="workdate" value="">
                         </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block mt-4">บันทึกข้อมูล</button>
+                    </div>
                     </form>
-                    <button type="button" class="btn btn-primary btn-lg btn-block mt-4">บันทึกข้อมูล</button>
+
                 </div>
             </div>
         </div>
