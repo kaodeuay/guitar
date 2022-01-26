@@ -13,6 +13,40 @@
 </head>
 
 <body>
+<?php
+// Include database connection file
+require_once "dbconnect.php";
+$sql = "SELECT StudentID, P_password, CF_password, Type_fname, flName, 
+Gender, Birthday, Home_no, Moo, District, City, County, Code_post, Phone_no, Email, Generation, Course, 
+Major, Hospital, Position, S_start_date FROM data_old_student ORDER BY StudentID";
+$result = mysqli_query($conn,$sql);
+?>
+<?php
+while($row = mysqli_fetch_assoc($result)) {
+    $sd_id = $row["StudentID"];
+    $psw = $row["P_password"];
+    $cfpsw = $row["CF_password"];
+    $tn = $row["Type_fname"];
+    $fl_name = $row["flName"];
+    $gd = $row["Gender"];
+    $bd = $row["Birthday"];
+    $h_no = $row["Home_no"];
+    $moo = $row["Moo"];
+    $dtt = $row["District"];
+    $city = $row["City"];
+    $cnt = $row["County"];
+    $cdp = $row["Code_post"];
+    $ph_no = $row["Phone_no"];
+    $eml = $row["Email"];
+    $gen = $row["Generation"];
+    $cse = $row["Course"];
+    $mj = $row["Major"];
+    $hpt = $row["Hospital"];
+    $pst = $row["Position"];
+    $stdt = $row["S_start_date"];   
+    
+}
+?>
     <div class="bg-img">
         <nav class="navbar navbar-light justify-content-between">
             <img src="Picture/logo.png" alt="" height="110">
@@ -21,10 +55,10 @@
     <div class="card" style="background-color: #2F89FC;">
         <div class="card-body">
             <nav class="nav nav-pills nav-justified">
-                <a class="nav-item nav-link" href="/guitar/index1.php">หน้าแรก</a>
-                <a class="nav-item nav-link active" href="/guitar/register.php">ลงทะเบียนศิษย์เก่า</a>
-                <a class="nav-item nav-link" href="/guitar/reportalumni.php">รายงานข้อมูลศิษย์เก่า</a>
-                <a class="nav-item nav-link" href="/guitar/checkalumni.php">แก้ไขข้อมูล</a>
+                <a class="nav-item nav-link" href="/guitarPJ/index1.php">หน้าแรก</a>
+                <a class="nav-item nav-link active" href="/guitarPJ/register.php">ลงทะเบียนศิษย์เก่า</a>
+                <a class="nav-item nav-link" href="/guitarPJ/reportalumni.php">รายงานข้อมูลศิษย์เก่า</a>
+                <a class="nav-item nav-link" href="/guitarPJ/checkalumni.php">แก้ไขข้อมูล</a>
             </nav>
         </div>
     </div>
@@ -178,10 +212,10 @@
                             <a href="https://www.facebook.com/kmphtlife/?_rdc=1&_rdr"><img src="Picture/facebook.svg" alt="" width="30" height="30"></a>
                         </li>
                         <li class="list-inline-item me-4">
-                            <a href="http://localhost/guitar/index1.php?#!"><img src="Picture/twitter.svg" alt="" width="30" height="30"></a>
+                            <a href="http://localhost/guitarPJ/index1.php?#!"><img src="Picture/twitter.svg" alt="" width="30" height="30"></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="http://localhost/guitar/index1.php?#!"><img src="Picture/youtube.svg" alt="" width="30" height="30"></a>
+                            <a href="http://localhost/guitarPJ/index1.php?#!"><img src="Picture/youtube.svg" alt="" width="30" height="30"></a>
                         </li>
                     </ul>
                 </div>
