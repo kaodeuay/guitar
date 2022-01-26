@@ -21,10 +21,10 @@
     <div class="card" style="background-color: #2F89FC;">
         <div class="card-body">
             <nav class="nav nav-pills nav-justified">
-                <a class="nav-item nav-link" href="/guitar/index1.php">หน้าแรก</a>
-                <a class="nav-item nav-link active" href="/guitar/register.php">ลงทะเบียนศิษย์เก่า</a>
-                <a class="nav-item nav-link" href="/guitar/reportalumni.php">รายงานข้อมูลศิษย์เก่า</a>
-                <a class="nav-item nav-link" href="/guitar/checkalumni.php">แก้ไขข้อมูล</a>
+                <a class="nav-item nav-link" href="/guitarPJ/index1.php">หน้าแรก</a>
+                <a class="nav-item nav-link active" href="/guitarPJ/register.php">ลงทะเบียนศิษย์เก่า</a>
+                <a class="nav-item nav-link" href="/guitarPJ/reportalumni.php">รายงานข้อมูลศิษย์เก่า</a>
+                <a class="nav-item nav-link" href="/guitarPJ/checkalumni.php">แก้ไขข้อมูล</a>
             </nav>
         </div>
     </div>
@@ -178,10 +178,10 @@
                             <a href="https://www.facebook.com/kmphtlife/?_rdc=1&_rdr"><img src="Picture/facebook.svg" alt="" width="30" height="30"></a>
                         </li>
                         <li class="list-inline-item me-4">
-                            <a href="http://localhost/guitar/index1.php?#!"><img src="Picture/twitter.svg" alt="" width="30" height="30"></a>
+                            <a href="http://localhost/guitarPJ/index1.php?#!"><img src="Picture/twitter.svg" alt="" width="30" height="30"></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="http://localhost/guitar/index1.php?#!"><img src="Picture/youtube.svg" alt="" width="30" height="30"></a>
+                            <a href="http://localhost/guitarPJ/index1.php?#!"><img src="Picture/youtube.svg" alt="" width="30" height="30"></a>
                         </li>
                     </ul>
                 </div>
