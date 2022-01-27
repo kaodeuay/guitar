@@ -13,40 +13,6 @@
 </head>
 
 <body>
-<?php
-// Include database connection file
-require_once "dbconnect.php";
-$sql = "SELECT StudentID, P_password, CF_password, Type_fname, flName, 
-Gender, Birthday, Home_no, Moo, District, City, County, Code_post, Phone_no, Email, Generation, Course, 
-Major, Hospital, Position, S_start_date FROM data_old_student ORDER BY StudentID";
-$result = mysqli_query($conn,$sql);
-?>
-<?php
-while($row = mysqli_fetch_assoc($result)) {
-    $sd_id = $row["StudentID"];
-    $psw = $row["P_password"];
-    $cfpsw = $row["CF_password"];
-    $tn = $row["Type_fname"];
-    $fl_name = $row["flName"];
-    $gd = $row["Gender"];
-    $bd = $row["Birthday"];
-    $h_no = $row["Home_no"];
-    $moo = $row["Moo"];
-    $dtt = $row["District"];
-    $city = $row["City"];
-    $cnt = $row["County"];
-    $cdp = $row["Code_post"];
-    $ph_no = $row["Phone_no"];
-    $eml = $row["Email"];
-    $gen = $row["Generation"];
-    $cse = $row["Course"];
-    $mj = $row["Major"];
-    $hpt = $row["Hospital"];
-    $pst = $row["Position"];
-    $stdt = $row["S_start_date"];   
-    
-}
-?>
     <div class="bg-img">
         <nav class="navbar navbar-light justify-content-between">
             <img src="Picture/logo.png" alt="" height="110">
@@ -55,10 +21,10 @@ while($row = mysqli_fetch_assoc($result)) {
     <div class="card" style="background-color: #2F89FC;">
         <div class="card-body">
             <nav class="nav nav-pills nav-justified">
-                <a class="nav-item nav-link" href="/guitarPJ/index1.php">หน้าแรก</a>
-                <a class="nav-item nav-link active" href="/guitarPJ/register.php">ลงทะเบียนศิษย์เก่า</a>
-                <a class="nav-item nav-link" href="/guitarPJ/reportalumni.php">รายงานข้อมูลศิษย์เก่า</a>
-                <a class="nav-item nav-link" href="/guitarPJ/checkalumni.php">แก้ไขข้อมูล</a>
+                <a class="nav-item nav-link" href="/guitar/index1.php">หน้าแรก</a>
+                <a class="nav-item nav-link active" href="/guitar/register.php">ลงทะเบียนศิษย์เก่า</a>
+                <a class="nav-item nav-link" href="/guitar/reportalumni.php">รายงานข้อมูลศิษย์เก่า</a>
+                <a class="nav-item nav-link" href="/guitar/login.php">แก้ไขข้อมูล</a>
             </nav>
         </div>
     </div>
@@ -76,16 +42,16 @@ while($row = mysqli_fetch_assoc($result)) {
                     <form class="row g-3 mt-4" action="process.php" method="POST">
                         <div class="col-md-12 position-relative">
                             <label for="validationTooltip04" class="form-label">รหัสนักศึกษา/บัญชีผู้ใช้</label>
-                            <input type="text" class="form-control" name="userid" value="">
+                            <input type="text" class="form-control" name="userid" value="" required>
                             <!--//required -->
                         </div>
                         <div class="col-md-12 position-relative">
                             <label for="validationTooltip04" class="form-label">รหัสผ่าน</label>
-                            <input type="password" class="form-control" name="pass" value="">
+                            <input type="password" class="form-control" name="pass" value="" required>
                         </div>
                         <div class="col-md-12">
                             <label for="validationDefault02" class="form-label">ยืนยันรหัสผ่าน</label>
-                            <input type="password" class="form-control" name="pass" value="">
+                            <input type="password" class="form-control" name="pass" value="" required>
                         </div>
                 </div>
             </div>
@@ -97,15 +63,15 @@ while($row = mysqli_fetch_assoc($result)) {
                     <div class="row g-3 mt-4">
                         <div class="col-md-4">
                             <label for="validationDefault01" class="form-label">คำนำหน้าชื่อ</label>
-                            <input type="text" class="form-control" name="nname" value="">
+                            <input type="text" class="form-control" name="nname" value="" required>
                         </div>
                         <div class="col-md-8">
                             <label for="validationDefault02" class="form-label">ชื่อ</label>
-                            <input type="text" class="form-control" name="name" value="">
+                            <input type="text" class="form-control" name="fullname" value="" required>
                         </div>
                         <div class="col-md-6">
                             <label for="validationDefault02" class="form-label">เพศ</label>
-                            <input type="text" class="form-control" name="sex" value="">
+                            <input type="text" class="form-control" name="sex" value="" required>
                         </div>
                         <div class="col-md-6">
                             <label for="validationDefaultUsername" class="form-label">วันเดือนปีเกิด</label>
@@ -115,50 +81,50 @@ while($row = mysqli_fetch_assoc($result)) {
                         </div>
                         <div class="col-md-3">
                             <label for="validationDefault03" class="form-label">บ้านเลขที่</label>
-                            <input type="text" class="form-control" name="numhome">
+                            <input type="text" class="form-control" name="numhome" required>
                         </div>
                         <div class="col-md-3">
                             <label for="validationDefault03" class="form-label">หมู่</label>
-                            <input type="text" class="form-control" name="moo">
+                            <input type="text" class="form-control" name="moo" required>
                         </div>
                         <div class="col-6">
                             <label for="validationDefault03" class="form-label">ตำบล</label>
-                            <input type="text" class="form-control" name="subdistrict">
+                            <input type="text" class="form-control" name="subdistrict" required>
                         </div>
                         <div class="col-md-4">
                             <label for="validationDefault03" class="form-label">อำเภอ</label>
-                            <input type="text" class="form-control" name="district">
+                            <input type="text" class="form-control" name="district" required>
                         </div>
                         <div class="col-md-4">
                             <label for="validationDefault03" class="form-label">จังหวัด</label>
-                            <input type="text" class="form-control" name="province">
+                            <input type="text" class="form-control" name="province" required>
                         </div>
                         <div class="col-4">
                             <label for="validationDefault03" class="form-label">รหัสไปรณีย์</label>
-                            <input type="text" class="form-control" name="postage">
+                            <input type="text" class="form-control" name="postage" required>
                         </div>
                         <div class="col-md-6">
                             <label for="validationDefault02" class="form-label">เบอร์โทร</label>
-                            <input type="text" class="form-control" name="phone" value="">
+                            <input type="text" class="form-control" name="phone" value="" required>
                         </div>
                         <div class="col-md-6">
                             <label for="validationDefault02" class="form-label">อีเมล</label>
-                            <input type="text" class="form-control" name="mail" value="">
+                            <input type="text" class="form-control" name="mail" value="" required>
                         </div>
                         <div class="col-md-3">
                             <label for="validationDefault03" class="form-label">รุ่น</label>
-                            <input type="text" class="form-control" name="gen">
+                            <input type="text" class="form-control" name="gen" required>
                         </div>
                         <div class="col-md-3">
                             <div class="col-md-12 position-relative">
                                 <label for="validationTooltip04" class="form-label">หลักสูตร</label>
-                                <input type="text" class="form-control" name="course" value="">
+                                <input type="text" class="form-control" name="course" value="" required>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="col-md-12 position-relative">
                                 <label for="validationTooltip04" class="form-label">สาขา</label>
-                                <input type="text" class="form-control" name="major" value="">
+                                <input type="text" class="form-control" name="major" value="" required>
                             </div>
                         </div>
                     </div>
@@ -172,15 +138,15 @@ while($row = mysqli_fetch_assoc($result)) {
                     <div class="row g-3 mt-4">
                         <div class="col-md-12 position-relative">
                             <label for="validationTooltip04" class="form-label">โรงพยาบาล</label>
-                            <input type="text" class="form-control" name="work" value="">
+                            <input type="text" class="form-control" name="work" value="" required>
                         </div>
                         <div class="col-md-12 position-relative">
                             <label for="validationTooltip04" class="form-label">ตำแหน่ง</label>
-                            <input type="text" class="form-control" name="position" value="">
+                            <input type="text" class="form-control" name="position" value="" required>
                         </div>
                         <div class="col-md-12">
                             <label for="validationDefault02" class="form-label">วันเข้าทำงาน</label>
-                            <input type="date" class="form-control" name="workdate" value="">
+                            <input type="date" class="form-control" name="workdate" value="" required>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg btn-block mt-4">บันทึกข้อมูล</button>
                     </div>

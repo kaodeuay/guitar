@@ -4,7 +4,7 @@
 $userid = $_POST['userid'];
 $pass = $_POST['pass'];
 $nname = $_POST['nname'];
-$name = $_POST['name'];
+$fullname = $_POST['fullname'];
 $sex = $_POST['sex'];
 $brithdate = $_POST['brithdate'];
 $numhome = $_POST['numhome'];
@@ -22,5 +22,13 @@ $work = $_POST['work'];
 $position = $_POST['position'];
 $workdate = $_POST['workdate'];
 
-mysqli_query($connect, "INSERT INTO member (userid, pass, nname, name, sex, brithdate, numhome, moo, subdistrict, district, province, postage, phone, mail, gen, course, major, work, position, workdate) VALUES ('$userid','$pass','$nname','$name','$sex','$brithdate','$numhome','$moo','$subdistrict','$district','$province','$postage','$phone','$mail','$gen','$course','$major','$work','$position','$workdate')");
+mysqli_query($connect, "INSERT INTO member (userid, pass, nname, fullname, sex, brithdate, numhome, moo, subdistrict, district, province, postage, phone, mail, gen, course, major, work, position, workdate) VALUES ('$userid','$pass','$nname','$fullname','$sex','$brithdate','$numhome','$moo','$subdistrict','$district','$province','$postage','$phone','$mail','$gen','$course','$major','$work','$position','$workdate')");
+
+    if (mysqli_affected_rows($connect)>0) {
+        echo '<p>เพิ่มสมาชิกศิษย์เก่าสำเร็จ</p>';
+        echo '<a href="index1.php">ตกลง</a>';
+    } else {
+        echo 'เพิ่มสมาชิกล้มเหลว';
+        echo mysqli_errno($connect);
+    }
 ?>

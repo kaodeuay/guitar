@@ -38,7 +38,7 @@
             <div class="containerunderline"></div>
             <div class="container bg-light">
                 <div class="card-body">
-                    <form action="memberalumni.php" method="get" enctype="multipart/form-data">
+                <form action="memberalumni.php" method="get" enctype="multipart/form-data">
                         <div class="form-group row">
                             <label for="inputPassword" class="col-sm-2 col-form-label">รหัสนักศึกษา</label>
                             <div class="col-sm-8">
@@ -50,49 +50,50 @@
                 </div>
             </div>
             <br>
-            <div class="card">
-                <div class="col">
+            <?php
+
+            if (isset($_GET['search'])) {
+                $search_value = $_REQUEST['value'];
+            }
+            if (empty($search_value)) {
+                echo "<h3 style='text-align:center;'>ไม่พบ</h3>";
+            } else {
+                $search_query = "SELECT * FROM member WHERE fullname LIKE '%$search_value%'";
+                $run_query = mysqli_query($connect, $search_query);
+
+                while ($search_row = mysqli_fetch_array($run_query)) {
+                    $userid = $search_row['userid'];
+                    $pass = $search_row['pass'];
+                    $nname = $search_row['nname'];
+                    $fullname = $search_row['fullname'];
+                    $sex = $search_row['sex'];
+                    $brithdate = $search_row['brithdate'];
+                    $numhome = $search_row['numhome'];
+                    $moo = $search_row['moo'];
+                    $subdistrict = $search_row['subdistrict'];
+                    $district = $search_row['district'];
+                    $province = $search_row['province'];
+                    $postage = $search_row['postage'];
+                    $phone = $search_row['phone'];
+                    $mail = $search_row['mail'];
+                    $gen = $search_row['gen'];
+                    $course = $search_row['course'];
+                    $major = $search_row['major'];
+                    $work = $search_row['work'];
+                    $position = $search_row['position'];
+                    $workdate = $search_row['workdate'];
+                
+            ?>
+                <div class="card">
+                    <div class="col">
+                        <br>
+                        <img src="Picture/logo2.png" alt="" height="150" class="center mb-4">
+                        <h5 class="text-center">รายงานข้อมูลศิษย์เก่าของสมาคมศิษย์เก่า</h5>
+                        <h5 class="text-center">วิทยาลัยเทคโนโลยีทางการแพทย์และสาธารณสุขกาญจนาภิเษก</h5>
+                    </div>
                     <br>
-                    <img src="Picture/logo2.png" alt="" height="150" class="center mb-4">
-                    <h5 class="text-center">รายงานข้อมูลศิษย์เก่าของสมาคมศิษย์เก่า</h5>
-                    <h5 class="text-center">วิทยาลัยเทคโนโลยีทางการแพทย์และสาธารณสุขกาญจนาภิเษก</h5>
-                </div>
-                <br>
-                <form>
-                    <?php
+                    <form>
 
-                    if (isset($_GET['id'])) {
-
-                        $select_post = "SELECT * FROM member WHERE id ";
-
-                        $run_post = mysqli_query($connect, $select_post);
-
-                        while ($row = mysqli_fetch_array($run_post)) {
-                            $userid = $row['userid'];
-                            $pass = $row['pass'];
-                            $nname = $row['nname'];
-                            $fullname = $row['fullname'];
-                            $sex = $row['sex'];
-                            $brithdate = $row['brithdate'];
-                            $numhome = $row['numhome'];
-                            $moo = $row['moo'];
-                            $subdistrict = $row['subdistrict'];
-                            $district = $row['district'];
-                            $province = $row['province'];
-                            $postage = $row['postage'];
-                            $phone = $row['phone'];
-                            $mail = $row['mail'];
-                            $gen = $row['gen'];
-                            $course = $row['course'];
-                            $major = $row['major'];
-                            $work = $row['work'];
-                            $position = $row['position'];
-                            $workdate = $row['workdate'];
-                        }
-
-
-
-                    ?>
                         <div class="form-row">
                             <div class="input-group mb-3">
                             </div>
@@ -206,9 +207,9 @@
                                 <p class="ml-3"><?php echo $workdate; ?></p>
                             </div>
                         </div>
-                    <?php } ?>
-                </form>
-            </div>
+                    <?php } } ?>
+                    </form>
+                </div>
         </div>
     </div>
 
