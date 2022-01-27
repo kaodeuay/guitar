@@ -15,7 +15,8 @@
 <body>
     <div class="bg-img">
         <nav class="navbar navbar-light justify-content-between">
-            <img src="Picture/logo.png" alt="" height="110">
+            <img src="Picture/logo.png" alt="" height="110">        
+            <a href="index1.php"><button class="btn" style="background-color: #F52E00;">ออกจากระบบ</button></a>
         </nav>
     </div>
     <div class="bg-color">
