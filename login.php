@@ -26,9 +26,9 @@
             <h2 class="m-b-37" style="font-family: 'Prompt', sans-serif;">เข้าสู่ระบบ</h2>
             <input type="text" class="form-input m-b-20" id="formGroupExampleInput" placeholder="บัญชีผู้ใช้" style="text-align: center;font-family: 'Kanit', sans-serif;">
             <input type="password" class="form-input m-b-27" id="inputPassword3" placeholder="รหัสผ่าน" style="text-align: center;font-family: 'Kanit', sans-serif;">
-            <a href="/guitar/checkalumni.php"><button type="button" class="btn" style="text-align: center;font-family: 'Kanit', sans-serif;">เข้าสู่ระบบ</button></a>
+            <a href="/guitarPJ/checkalumni.php"><button type="button" class="btn" style="text-align: center;font-family: 'Kanit', sans-serif;">เข้าสู่ระบบ</button></a>
             <p class="m-b-100" style="text-align: center;font-family: 'Kanit', sans-serif;">หรือคุณยังไม่มีบัญชี</p>
-            <a href="/guitar/register.php"style="text-align: center;font-family: 'Kanit', sans-serif;color:#000">ลงทะเบียน</a>
+            <a href="/guitarPJ/register.php"style="text-align: center;font-family: 'Kanit', sans-serif;color:#000">ลงทะเบียน</a>
         </div>
     </div>
 

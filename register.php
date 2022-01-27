@@ -21,10 +21,10 @@
     <div class="card" style="background-color: #2F89FC;">
         <div class="card-body">
             <nav class="nav nav-pills nav-justified">
-                <a class="nav-item nav-link" href="/guitar/index1.php">หน้าแรก</a>
-                <a class="nav-item nav-link active" href="/guitar/register.php">ลงทะเบียนศิษย์เก่า</a>
-                <a class="nav-item nav-link" href="/guitar/reportalumni.php">รายงานข้อมูลศิษย์เก่า</a>
-                <a class="nav-item nav-link" href="/guitar/login.php">แก้ไขข้อมูล</a>
+                <a class="nav-item nav-link" href="/guitarPJ/index1.php">หน้าแรก</a>
+                <a class="nav-item nav-link active" href="/guitarPJ/register.php">ลงทะเบียนศิษย์เก่า</a>
+                <a class="nav-item nav-link" href="/guitarPJ/reportalumni.php">รายงานข้อมูลศิษย์เก่า</a>
+                <a class="nav-item nav-link" href="/guitarPJ/login.php">แก้ไขข้อมูล</a>
             </nav>
         </div>
     </div>
