@@ -25,8 +25,8 @@ $workdate = $_POST['workdate'];
 mysqli_query($connect, "INSERT INTO member (userid, pass, nname, fullname, sex, brithdate, numhome, moo, subdistrict, district, province, postage, phone, mail, gen, course, major, work, position, workdate) VALUES ('$userid','$pass','$nname','$fullname','$sex','$brithdate','$numhome','$moo','$subdistrict','$district','$province','$postage','$phone','$mail','$gen','$course','$major','$work','$position','$workdate')");
 
     if (mysqli_affected_rows($connect)>0) {
-        echo '<p>เพิ่มสมาชิกศิษย์เก่าสำเร็จ</p>';
-        echo '<a href="index1.php">ตกลง</a>';
+        header("location: register.php");
+        echo "<script>alert('เพิ่มข้อมูลสำเร็จ!');</script>";
     } else {
         echo 'เพิ่มสมาชิกล้มเหลว';
         echo mysqli_errno($connect);

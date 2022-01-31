@@ -1,3 +1,24 @@
+<?php require_once "connect.php";
+session_start();
+
+if (isset($_POST['login'])) {
+    $userid = mysqli_real_escape_string($connect, $_POST['userid']);
+    $pass = mysqli_real_escape_string($connect, $_POST['pass']);
+
+    $query = "SELECT * FROM member WHERE userid = '$userid' AND pass = '$pass'";
+
+    $result = mysqli_query($connect, $query);
+    if (mysqli_num_rows($result) > 0) {
+        $_SESSION['userid'] = $userid;
+        $postid['userid'] = $userid;
+        echo "<script>alert('Login Successfully');</script>";
+        header("location: checkalumni.php");
+    } else {
+        echo "<script>alert('Username or Password is incorrect!!');</script>";
+    }
+}
+
+?>
 <!doctype html>
 <html lang="en">
 
@@ -20,16 +41,18 @@
 
 <body style="background-image: url('Picture/flower2.jpg');">
     <div class="container-login">
-        <div class="container-box">
-            <img src="Picture/logo2.png" alt="" width="100" height="140">
-            <h6 class="m-b-37" style="text-align: center;font-family: 'Kanit', sans-serif;">สมาคมศิษย์เก่าวิทยาลัยเทคโนโลยีทางการแพทย์และสาธารณสุขกาญจนาภิเษก</h6>
-            <h2 class="m-b-37" style="font-family: 'Prompt', sans-serif;">เข้าสู่ระบบ</h2>
-            <input type="text" class="form-input m-b-20" id="formGroupExampleInput" placeholder="บัญชีผู้ใช้" style="text-align: center;font-family: 'Kanit', sans-serif;">
-            <input type="password" class="form-input m-b-27" id="inputPassword3" placeholder="รหัสผ่าน" style="text-align: center;font-family: 'Kanit', sans-serif;">
-            <a href="/guitar/checkalumni.php"><button type="button" class="btn" style="text-align: center;font-family: 'Kanit', sans-serif;">เข้าสู่ระบบ</button></a>
-            <p class="m-b-100" style="text-align: center;font-family: 'Kanit', sans-serif;">หรือคุณยังไม่มีบัญชี</p>
-            <a href="/guitar/register.php"style="text-align: center;font-family: 'Kanit', sans-serif;color:#000">ลงทะเบียน</a>
-        </div>
+        <form action="login.php" method="post">
+            <div class="container-box">
+                <img src="Picture/logo2.png" alt="" width="100" height="140">
+                <h6 class="m-b-37" style="text-align: center;font-family: 'Kanit', sans-serif;">สมาคมศิษย์เก่าวิทยาลัยเทคโนโลยีทางการแพทย์และสาธารณสุขกาญจนาภิเษก</h6>
+                <h2 class="m-b-37" style="font-family: 'Prompt', sans-serif;">เข้าสู่ระบบ</h2>
+                <input type="text" class="form-input m-b-20" name="userid" placeholder="บัญชีผู้ใช้" style="text-align: center;font-family: 'Kanit', sans-serif;">
+                <input type="password" class="form-input m-b-27" name="pass" placeholder="รหัสผ่าน" style="text-align: center;font-family: 'Kanit', sans-serif;">
+                <a href="/guitar/checkalumni.php?edit=<?php $postid; ?>"><button type="submit" name="login" value="Login" class="btn" style="text-align: center;font-family: 'Kanit', sans-serif;">เข้าสู่ระบบ</button></a>
+                <p class="m-b-100" style="text-align: center;font-family: 'Kanit', sans-serif;">หรือคุณยังไม่มีบัญชี</p>
+                <a href="/guitar/register.php" style="text-align: center;font-family: 'Kanit', sans-serif;color:#000">ลงทะเบียน</a>
+            </div>
+        </form>
     </div>
 
 </body>
