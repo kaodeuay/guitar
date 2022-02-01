@@ -24,7 +24,7 @@
     <div class="card" style="background-color: #2F89FC;">
         <div class="card-body">
             <nav class="nav nav-pills nav-justified">
-                <a class="nav-item nav-link" href="/guitar/index1.php">หน้าแรก</a>
+                <a class="nav-item nav-link" href="/guitar/homepage.php">หน้าแรก</a>
                 <a class="nav-item nav-link" href="/guitar/register.php">ลงทะเบียนศิษย์เก่า</a>
                 <a class="nav-item nav-link active" href="/guitar/reportalumni.php">รายงานข้อมูลศิษย์เก่า</a>
                 <a class="nav-item nav-link" href="/guitar/login.php">แก้ไขข้อมูล</a>
@@ -40,11 +40,11 @@
                 <div class="card-body">
                     <form action="memberalumni.php" method="get" enctype="multipart/form-data">
                         <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">รหัสนักศึกษา</label>
+                            <label for="inputPassword" class="col-sm-2 col-form-label">ชื่อนักศึกษา</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name="value" placeholder="เช่น 6131302010">
+                                <input type="text" class="form-control" name="value" placeholder="เช่น กมลรัตน์">
                             </div>
-                            <button type="submit" class="btn btn-primary" name="search">ค้นหา</button>
+                            <button type="submit" class="btn btnprimary" name="search">ค้นหา</button>
                         </div>
                     </form>
                 </div>
@@ -232,10 +232,10 @@
                             <a href="https://www.facebook.com/kmphtlife/?_rdc=1&_rdr"><img src="Picture/facebook.svg" alt="" width="30" height="30"></a>
                         </li>
                         <li class="list-inline-item me-4">
-                            <a href="http://localhost/guitarPJ/index1.php?#!"><img src="Picture/twitter.svg" alt="" width="30" height="30"></a>
+                            <a href="http://localhost/guitarPJ/homepage.php?#!"><img src="Picture/twitter.svg" alt="" width="30" height="30"></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="http://localhost/guitarPJ/index1.php?#!"><img src="Picture/youtube.svg" alt="" width="30" height="30"></a>
+                            <a href="http://localhost/guitarPJ/homepage.php?#!"><img src="Picture/youtube.svg" alt="" width="30" height="30"></a>
                         </li>
                     </ul>
                 </div>

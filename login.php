@@ -14,7 +14,7 @@ if (isset($_POST['login'])) {
         echo "<script>alert('Login Successfully');</script>";
         header("location: checkalumni.php");
     } else {
-        echo "<script>alert('Username or Password is incorrect!!');</script>";
+        echo "<script>alert('รหัสนักศึกษาหรือรหัสผ่านผิด กรุณาลองใหม่อีกครั้ง');</script>";
     }
 }
 
@@ -39,7 +39,7 @@ if (isset($_POST['login'])) {
     <title>เข้าสู่ระบบ | สมาคมศิษย์เก่าวิทยาลัยเทคโนโลยีทางการแพทย์และสาธารณสุขกาญจนาภิเษก</title>
 </head>
 
-<body style="background-image: url('Picture/flower2.jpg');">
+<body style="background-image: url('Picture/flower.png');opacity: 0.8;">
     <div class="container-login">
         <form action="login.php" method="post">
             <div class="container-box">
@@ -48,7 +48,7 @@ if (isset($_POST['login'])) {
                 <h2 class="m-b-37" style="font-family: 'Prompt', sans-serif;">เข้าสู่ระบบ</h2>
                 <input type="text" class="form-input m-b-20" name="userid" placeholder="บัญชีผู้ใช้" style="text-align: center;font-family: 'Kanit', sans-serif;">
                 <input type="password" class="form-input m-b-27" name="pass" placeholder="รหัสผ่าน" style="text-align: center;font-family: 'Kanit', sans-serif;">
-                <a href="/guitar/checkalumni.php?edit=<?php $postid; ?>"><button type="submit" name="login" value="Login" class="btn" style="text-align: center;font-family: 'Kanit', sans-serif;">เข้าสู่ระบบ</button></a>
+                <a href="/guitar/checkalumni.php?edit=<?php $postid; ?>"><button type="submit" name="login" value="Login" class="btn btnprimary" style="text-align: center;font-family: 'Kanit', sans-serif;">เข้าสู่ระบบ</button></a>
                 <p class="m-b-100" style="text-align: center;font-family: 'Kanit', sans-serif;">หรือคุณยังไม่มีบัญชี</p>
                 <a href="/guitar/register.php" style="text-align: center;font-family: 'Kanit', sans-serif;color:#000">ลงทะเบียน</a>
             </div>

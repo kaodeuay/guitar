@@ -21,7 +21,7 @@
     <div class="card" style="background-color: #2F89FC;">
         <div class="card-body">
             <nav class="nav nav-pills nav-justified">
-                <a class="nav-item nav-link" href="/guitar/index1.php">หน้าแรก</a>
+                <a class="nav-item nav-link" href="/guitar/homepage.php">หน้าแรก</a>
                 <a class="nav-item nav-link active" href="/guitar/register.php">ลงทะเบียนศิษย์เก่า</a>
                 <a class="nav-item nav-link" href="/guitar/reportalumni.php">รายงานข้อมูลศิษย์เก่า</a>
                 <a class="nav-item nav-link" href="/guitar/login.php">แก้ไขข้อมูล</a>
@@ -42,16 +42,16 @@
                     <form class="row g-3 mt-4" action="process.php" method="POST">
                         <div class="col-md-12 position-relative">
                             <label for="validationTooltip04" class="form-label">รหัสนักศึกษา/บัญชีผู้ใช้</label>
-                            <input type="text" class="form-control" name="userid" value="" required>
+                            <input type="text" class="form-control" name="userid" value="" maxlength="12" required>
                             <!--//required -->
                         </div>
                         <div class="col-md-12 position-relative">
                             <label for="validationTooltip04" class="form-label">รหัสผ่าน</label>
-                            <input type="password" class="form-control" name="pass" value="" required>
+                            <input type="password" class="form-control" name="pass" value="" maxlength="8" required>
                         </div>
                         <div class="col-md-12">
                             <label for="validationDefault02" class="form-label">ยืนยันรหัสผ่าน</label>
-                            <input type="password" class="form-control" name="pass" value="" required>
+                            <input type="password" class="form-control" name="pass" value="" maxlength="8" required>
                         </div>
                 </div>
             </div>
@@ -101,31 +101,27 @@
                         </div>
                         <div class="col-4">
                             <label for="validationDefault03" class="form-label">รหัสไปรณีย์</label>
-                            <input type="text" class="form-control" name="postage" required>
+                            <input type="text" class="form-control" name="postage" maxlength="5" required>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <label for="validationDefault02" class="form-label">เบอร์โทร</label>
-                            <input type="text" class="form-control" name="phone" value="" required>
+                            <input type="text" class="form-control" name="phone" value="" maxlength="10" required>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-7">
                             <label for="validationDefault02" class="form-label">อีเมล</label>
                             <input type="text" class="form-control" name="mail" value="" required>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-2">
                             <label for="validationDefault03" class="form-label">รุ่น</label>
-                            <input type="text" class="form-control" name="gen" required>
+                            <input type="text" class="form-control" name="gen" maxlength="3" required>
                         </div>
-                        <div class="col-md-3">
-                            <div class="col-md-12 position-relative">
+                        <div class="col-md-5">
                                 <label for="validationTooltip04" class="form-label">หลักสูตร</label>
                                 <input type="text" class="form-control" name="course" value="" required>
-                            </div>
                         </div>
-                        <div class="col-6">
-                            <div class="col-md-12 position-relative">
+                        <div class="col-5">
                                 <label for="validationTooltip04" class="form-label">สาขา</label>
                                 <input type="text" class="form-control" name="major" value="" required>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -147,8 +143,8 @@
                         <div class="col-md-12">
                             <label for="validationDefault02" class="form-label">วันเข้าทำงาน</label>
                             <input type="date" class="form-control" name="workdate" value="" required>
+                        <button type="submit" class="btn btnprimary btn-lg btn-block mt-4">บันทึกข้อมูล</button>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-lg btn-block mt-4">บันทึกข้อมูล</button>
                     </div>
                     </form>
 
@@ -178,10 +174,10 @@
                             <a href="https://www.facebook.com/kmphtlife/?_rdc=1&_rdr"><img src="Picture/facebook.svg" alt="" width="30" height="30"></a>
                         </li>
                         <li class="list-inline-item me-4">
-                            <a href="http://localhost/guitarPJ/index1.php?#!"><img src="Picture/twitter.svg" alt="" width="30" height="30"></a>
+                            <a href="http://localhost/guitarPJ/homepage.php?#!"><img src="Picture/twitter.svg" alt="" width="30" height="30"></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="http://localhost/guitarPJ/index1.php?#!"><img src="Picture/youtube.svg" alt="" width="30" height="30"></a>
+                            <a href="http://localhost/guitarPJ/homepage.php?#!"><img src="Picture/youtube.svg" alt="" width="30" height="30"></a>
                         </li>
                     </ul>
                 </div>

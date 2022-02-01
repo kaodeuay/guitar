@@ -173,7 +173,7 @@ hr {
     margin-left: 50px;
 }
 
-.btn {
+.btnprimary {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,6 +182,21 @@ hr {
     height: 38px;
     background-color: #2F89FC;
     border-radius: 25px;
+    font-family: SourceSansPro-SemiBold;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.btnloguot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 38px;
+    background-color: #2F89FC;
     font-family: SourceSansPro-SemiBold;
     font-size: 14px;
     color: #fff;

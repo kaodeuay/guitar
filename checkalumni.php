@@ -82,14 +82,14 @@ if (!isset($_SESSION['userid'])) {
         <div class="bg-img">
             <nav class="navbar navbar-light justify-content-between">
                 <img src="Picture/logo.png" alt="" height="110">
-                <a href="index1.php"><button class="btn" style="background-color: #F52E00;">ออกจากระบบ</button></a>
+                <a href="homepage.php"><button class="btn btnloguot">ออกจากระบบ</button></a>
             </nav>
         </div>
         <div class="bg-color">
             <div class="card" style="background-color: #2F89FC;">
                 <div class="card-body">
                     <nav class="nav nav-pills nav-justified">
-                        <a class="nav-item nav-link" href="/guitar/index1.php">หน้าแรก</a>
+                        <a class="nav-item nav-link" href="/guitar/homepage.php">หน้าแรก</a>
                         <a class="nav-item nav-link" href="/guitar/register.php">ลงทะเบียนศิษย์เก่า</a>
                         <a class="nav-item nav-link" href="/guitar/reportalumni.php">รายงานข้อมูลศิษย์เก่า</a>
                         <a class="nav-item nav-link active" href="">แก้ไขข้อมูล</a>
@@ -115,7 +115,7 @@ if (!isset($_SESSION['userid'])) {
                                     </div>
                                     <div class="col-md-12 position-relative">
                                         <label for="validationTooltip04" class="form-label">รหัสผ่าน</label>
-                                        <input type="password" class="form-control" id="validationDefault02" name="pass" value="<?php echo $post_pass; ?>">
+                                        <input type="password" class="form-control" id="validationDefault02" maxlength="8" name="pass" value="<?php echo $post_pass; ?>">
                                     </div>
                                     <div class="col-md-4">
                                         <label for="validationDefault01" class="form-label">คำนำหน้าชื่อ</label>
@@ -157,31 +157,27 @@ if (!isset($_SESSION['userid'])) {
                                     </div>
                                     <div class="col-4">
                                         <label for="validationDefault03" class="form-label">รหัสไปรณีย์</label>
-                                        <input type="text" class="form-control" id="validationDefault03" name="postage" value="<?php echo $post_postage; ?>" required>
+                                        <input type="text" class="form-control" id="validationDefault03" maxlength="5" name="postage" value="<?php echo $post_postage; ?>" required>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-5">
                                         <label for="validationDefault02" class="form-label">เบอร์โทร</label>
-                                        <input type="text" class="form-control" id="validationDefault02" name="phone" value="<?php echo $post_phone; ?>" required>
+                                        <input type="text" class="form-control" id="validationDefault02" maxlength="10" name="phone" value="<?php echo $post_phone; ?>" required>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-7">
                                         <label for="validationDefault02" class="form-label">อีเมล</label>
                                         <input type="text" class="form-control" id="validationDefault02" name="mail" value="<?php echo $post_mail; ?>" required>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <label for="validationDefault03" class="form-label">รุ่น</label>
-                                        <input type="text" class="form-control" id="validationDefault03" name="gen" value="<?php echo $post_gen; ?>" required>
+                                        <input type="text" class="form-control" id="validationDefault03" maxlength="3" name="gen" value="<?php echo $post_gen; ?>" required>
                                     </div>
-                                    <div class="col-md-3">
-                                        <div class="col-md-12 position-relative">
+                                    <div class="col-md-5">
                                             <label for="validationTooltip04" class="form-label">หลักสูตร</label>
                                             <input type="text" class="form-control" id="validationDefault02" name="course" value="<?php echo $post_course; ?>" required>
-                                        </div>
                                     </div>
-                                    <div class="col-6">
-                                        <div class="col-md-12 position-relative">
+                                    <div class="col-5">
                                             <label for="validationTooltip04" class="form-label">สาขา</label>
                                             <input type="text" class="form-control" id="validationDefault02" name="major" value="<?php echo $post_major; ?>" required>
-                                        </div>
                                     </div>
                                 </div>
                         </div>
@@ -205,7 +201,7 @@ if (!isset($_SESSION['userid'])) {
                                     <input type="date" class="form-control" name="workdate" value="<?php echo $post_workdate; ?>" aria-describedby="inputGroupPrepend2">
                                 </div>
                             </div>
-                            <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block mt-4">บันทึกข้อมูล</button>
+                            <button type="submit" name="submit" class="btn btnprimary btn-lg btn-block mt-4">บันทึกข้อมูล</button>
 
                         </div>
                     </div>
@@ -233,10 +229,10 @@ if (!isset($_SESSION['userid'])) {
                                 <a href="https://www.facebook.com/kmphtlife/?_rdc=1&_rdr"><img src="Picture/facebook.svg" alt="" width="30" height="30"></a>
                             </li>
                             <li class="list-inline-item me-4">
-                                <a href="http://localhost/guitarPJ/index1.php?#!"><img src="Picture/twitter.svg" alt="" width="30" height="30"></a>
+                                <a href="http://localhost/guitarPJ/homepage.php?#!"><img src="Picture/twitter.svg" alt="" width="30" height="30"></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="http://localhost/guitarPJ/index1.php?#!"><img src="Picture/youtube.svg" alt="" width="30" height="30"></a>
+                                <a href="http://localhost/guitarPJ/homepage.php?#!"><img src="Picture/youtube.svg" alt="" width="30" height="30"></a>
                             </li>
                         </ul>
                     </div>

@@ -24,7 +24,7 @@
     <div class="card" style="background-color: #2F89FC;">
         <div class="card-body">
             <nav class="nav nav-pills nav-justified">
-                <a class="nav-item nav-link" href="/guitar/index1.php">หน้าแรก</a>
+                <a class="nav-item nav-link" href="/guitar/homepage.php">หน้าแรก</a>
                 <a class="nav-item nav-link" href="/guitar/register.php">ลงทะเบียนศิษย์เก่า</a>
                 <a class="nav-item nav-link active" href="/guitar/reportalumni.php">รายงานข้อมูลศิษย์เก่า</a>
                 <a class="nav-item nav-link" href="/guitar/login.php">แก้ไขข้อมูล</a>
@@ -38,13 +38,13 @@
             <div class="containerunderline"></div>
             <div class="container bg-light">
                 <div class="card-body">
-                <form action="memberalumni.php" method="get" enctype="multipart/form-data">
+                    <form action="memberalumni.php" method="get" enctype="multipart/form-data">
                         <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">รหัสนักศึกษา</label>
+                            <label for="inputPassword" class="col-sm-2 col-form-label">ชื่อนักศึกษา</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" name="value" placeholder="เช่น 6131302010">
+                                <input type="text" class="form-control" name="value" placeholder="เช่น กมลรัตน์">
                             </div>
-                            <button type="submit" class="btn btn-primary" name="search">ค้นหา</button>
+                            <button type="submit" class="btn btnprimary" name="search">ค้นหา</button>
                         </div>
                     </form>
                 </div>
@@ -82,134 +82,138 @@
                     $work = $search_row['work'];
                     $position = $search_row['position'];
                     $workdate = $search_row['workdate'];
-                
+
             ?>
-                <div class="card">
-                    <div class="col">
+                    <div class="card">
+                        <div class="col">
+                            <br>
+                            <img src="Picture/logo2.png" alt="" height="150" class="center mb-4">
+                            <h5 class="text-center">รายงานข้อมูลศิษย์เก่าของสมาคมศิษย์เก่า</h5>
+                            <h5 class="text-center">วิทยาลัยเทคโนโลยีทางการแพทย์และสาธารณสุขกาญจนาภิเษก</h5>
+                        </div>
                         <br>
-                        <img src="Picture/logo2.png" alt="" height="150" class="center mb-4">
-                        <h5 class="text-center">รายงานข้อมูลศิษย์เก่าของสมาคมศิษย์เก่า</h5>
-                        <h5 class="text-center">วิทยาลัยเทคโนโลยีทางการแพทย์และสาธารณสุขกาญจนาภิเษก</h5>
+                        <form>
+
+                            <div class="form-row">
+                                <div class="input-group mb-3">
+                                </div>
+                                <div class="input-group mb-3 col-6">
+                                    <label for="To the"><b>รหัสนักศึกษา</b></label>
+                                    <p class="ml-3"><?php echo $userid; ?></p>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group mb-3">
+                                </div>
+                                <div class="input-group mb-3 col-6">
+                                    <label for="To the"><b>คำนำหน้าชื่อ</b></label>
+                                    <p class="ml-3"><?php echo $nname; ?></p>
+                                </div>
+                                <div class="input-group mb-3 col-6">
+                                    <label for="To the"><b>ชื่อ-นามสกุล</b></label>
+                                    <p class="ml-3"><?php echo $fullname; ?></p>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group mb-3">
+                                </div>
+                                <div class="input-group mb-3 col-6">
+                                    <label for="To the"><b>เพศ</b></label>
+                                    <p class="ml-3"><?php echo $sex; ?></p>
+                                </div>
+                                <div class="input-group mb-3 col-6">
+                                    <label for="To the"><b>วันเดือนปีเกิด</b></label>
+                                    <p class="ml-3"><?php echo $brithdate; ?></p>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group mb-3">
+                                </div>
+                                <div class="input-group mb-3 col-3">
+                                    <label for="To the"><b>บ้านเลขที่</b></label>
+                                    <p class="ml-3"><?php echo $numhome; ?></p>
+                                </div>
+                                <div class="input-group mb-3 col-3">
+                                    <label for="To the"><b>หมู่</b></label>
+                                    <p class="ml-3"><?php echo $moo; ?></p>
+                                </div>
+                                <div class="input-group mb-3 col-4">
+                                    <label for="To the"><b>ตำบล</b></label>
+                                    <p class="ml-3"><?php echo $subdistrict; ?></p>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="input-group mb-3">
+                                </div>
+                                <div class="input-group mb-3 col-3">
+                                    <label for="To the"><b>อำเภอ</b></label>
+                                    <p class="ml-3"><?php echo $district; ?></p>
+                                </div>
+                                <div class="input-group mb-3 col-3">
+                                    <label for="To the"><b>จังหวัด</b></label>
+                                    <p class="ml-3"><?php echo $province; ?></p>
+                                </div>
+                                <div class="input-group mb-3 col-4">
+                                    <label for="To the"><b>รหัสไปรษณีย์</b></label>
+                                    <p class="ml-3"><?php echo $postage; ?></p>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group mb-3">
+                                </div>
+                                <div class="input-group mb-3 col-6">
+                                    <label for="To the"><b>เบอร์โทร</b></label>
+                                    <p class="ml-3"><?php echo $phone; ?></p>
+                                </div>
+                                <div class="input-group mb-3 col-4">
+                                    <label for="To the"><b>อีเมล</b></label>
+                                    <p class="ml-3"><?php echo $mail; ?></p>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group mb-3">
+                                </div>
+                                <div class="input-group mb-3 col-6">
+                                    <label for="To the"><b>รุ่น</b></label>
+                                    <p class="ml-3"><?php echo $gen; ?></p>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group mb-3 col-6">
+                                    <label for="To the"><b>หลักสูตร</b></label>
+                                    <p class="ml-3"><?php echo $course; ?></p>
+                                </div>
+                                <div class="input-group mb-3 col-6">
+                                    <label for="To the"><b>สาขา</b></label>
+                                    <p class="ml-3"><?php echo $major; ?></p>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group mb-3">
+                                </div>
+                                <div class="input-group mb-3 col-6">
+                                    <label for="To the"><b>โรงพยาบาล</b></label>
+                                    <p class="ml-3"><?php echo $work; ?></p>
+                                </div>
+                                
+                                <div class="input-group mb-3 col-6">
+                                    <label for="To the"><b>ตำแหน่ง</b></label>
+                                    <p class="ml-3"><?php echo $position; ?></p>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group mb-3">
+                                </div>
+                                <div class="input-group mb-3 col-4">
+                                    <label for="To the"><b>วันเข้าทำงาน</b></label>
+                                    <p class="ml-3"><?php echo $workdate; ?></p>
+                                </div>
+                            </div>
+                    <?php }
+            } ?>
+                        </form>
                     </div>
-                    <br>
-                    <form>
-
-                        <div class="form-row">
-                            <div class="input-group mb-3">
-                            </div>
-                            <div class="input-group mb-3 col-6">
-                                <label for="To the"><b>รหัสนักศึกษา</b></label>
-                                <p class="ml-3"><?php echo $userid; ?></p>
-                            </div>
-                            <div class="input-group mb-3 col-4">
-                                <label for="To the"><b>คำนำหน้าชื่อ</b></label>
-                                <p class="ml-3"><?php echo $nname; ?></p>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="input-group mb-3">
-                            </div>
-                            <div class="input-group mb-3 col-6">
-                                <label for="To the"><b>ชื่อ-นามสกุล</b></label>
-                                <p class="ml-3"><?php echo $fullname; ?></p>
-                            </div>
-                            <div class="input-group mb-3 col-4">
-                                <label for="To the"><b>เพศ</b></label>
-                                <p class="ml-3"><?php echo $sex; ?></p>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="input-group mb-3">
-                            </div>
-                            <div class="input-group mb-3 col-6">
-                                <label for="To the"><b>วันเดือนปีเกิด</b></label>
-                                <p class="ml-3"><?php echo $brithdate; ?></p>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="input-group mb-3">
-                            </div>
-                            <div class="input-group mb-3 col-3">
-                                <label for="To the"><b>บ้านเลขที่</b></label>
-                                <p class="ml-3"><?php echo $numhome; ?></p>
-                            </div>
-                            <div class="input-group mb-3 col-3">
-                                <label for="To the"><b>หมู่</b></label>
-                                <p class="ml-3"><?php echo $moo; ?></p>
-                            </div>
-                            <div class="input-group mb-3 col-4">
-                                <label for="To the"><b>ตำบล</b></label>
-                                <p class="ml-3"><?php echo $subdistrict; ?></p>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="input-group mb-3">
-                            </div>
-                            <div class="input-group mb-3 col-3">
-                                <label for="To the"><b>อำเภอ</b></label>
-                                <p class="ml-3"><?php echo $district; ?></p>
-                            </div>
-                            <div class="input-group mb-3 col-3">
-                                <label for="To the"><b>จังหวัด</b></label>
-                                <p class="ml-3"><?php echo $province; ?></p>
-                            </div>
-                            <div class="input-group mb-3 col-4">
-                                <label for="To the"><b>รหัสไปรษณีย์</b></label>
-                                <p class="ml-3"><?php echo $postage; ?></p>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="input-group mb-3">
-                            </div>
-                            <div class="input-group mb-3 col-6">
-                                <label for="To the"><b>เบอร์โทร</b></label>
-                                <p class="ml-3"><?php echo $phone; ?></p>
-                            </div>
-                            <div class="input-group mb-3 col-4">
-                                <label for="To the"><b>อีเมล</b></label>
-                                <p class="ml-3"><?php echo $mail; ?></p>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="input-group mb-3">
-                            </div>
-                            <div class="input-group mb-3 col-6">
-                                <label for="To the"><b>รุ่น</b></label>
-                                <p class="ml-3"><?php echo $gen; ?></p>
-                            </div>
-                            <div class="input-group mb-3 col-4">
-                                <label for="To the"><b>หลักสูตร</b></label>
-                                <p class="ml-3"><?php echo $course; ?></p>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="input-group mb-3">
-                            </div>
-                            <div class="input-group mb-3 col-6">
-                                <label for="To the"><b>สาขา</b></label>
-                                <p class="ml-3"><?php echo $major; ?></p>
-                            </div>
-                            <div class="input-group mb-3 col-4">
-                                <label for="To the"><b>โรงพยาบาล</b></label>
-                                <p class="ml-3"><?php echo $work; ?></p>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="input-group mb-3">
-                            </div>
-                            <div class="input-group mb-3 col-6">
-                                <label for="To the"><b>ตำแหน่ง</b></label>
-                                <p class="ml-3"><?php echo $position; ?></p>
-                            </div>
-                            <div class="input-group mb-3 col-4">
-                                <label for="To the"><b>วันเข้าทำงาน</b></label>
-                                <p class="ml-3"><?php echo $workdate; ?></p>
-                            </div>
-                        </div>
-                    <?php } } ?>
-                    </form>
-                </div>
         </div>
     </div>
 
@@ -233,10 +237,10 @@
                             <a href="https://www.facebook.com/kmphtlife/?_rdc=1&_rdr"><img src="Picture/facebook.svg" alt="" width="30" height="30"></a>
                         </li>
                         <li class="list-inline-item me-4">
-                            <a href="http://localhost/guitarPJ/index1.php?#!"><img src="Picture/twitter.svg" alt="" width="30" height="30"></a>
+                            <a href="http://localhost/guitarPJ/homepage.php?#!"><img src="Picture/twitter.svg" alt="" width="30" height="30"></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="http://localhost/guitarPJ/index1.php?#!"><img src="Picture/youtube.svg" alt="" width="30" height="30"></a>
+                            <a href="http://localhost/guitarPJ/homepage.php?#!"><img src="Picture/youtube.svg" alt="" width="30" height="30"></a>
                         </li>
                     </ul>
                 </div>
